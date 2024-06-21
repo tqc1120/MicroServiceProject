@@ -7,6 +7,15 @@ public class GeneralResponse {
     private Date timestamp;
     private Object data;
 
+    public GeneralResponse() {
+    }
+
+    public GeneralResponse(int code, Date timestamp, Object data) {
+        this.code = code;
+        this.timestamp = timestamp;
+        this.data = data;
+    }
+
     public int getCode() {
         return code;
     }

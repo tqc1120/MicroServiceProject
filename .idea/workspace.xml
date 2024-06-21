@@ -4,17 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8d2eff7-17fe-4f43-b455-ce99577f9cfe" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/config/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/src/main/resources/bootstrap.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/details/src/main/java/com/example/details/DetailsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/details/src/main/java/com/example/details/DetailsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/details/src/main/java/com/example/details/service/WeatherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/details/src/main/java/com/example/details/service/WeatherServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="e8d2eff7-17fe-4f43-b455-ce99577f9cfe" name="Changes" comment="Initialization.">
+      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/example/search/config/RestTemplateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/common/domain/GeneralResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/domain/GeneralResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/search/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/search.iml" beforeDir="false" afterPath="$PROJECT_DIR$/search/search.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/src/main/java/com/example/search/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/search/src/main/java/com/example/search/controller/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/target/classes/com/example/search/controller/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/search/target/classes/com/example/search/controller/SearchController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -33,7 +42,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.DetailsApplication">
+  <component name="RunManager" selected="Application.SearchApplication">
     <configuration name="ConfigApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -97,10 +106,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SearchApplication" />
         <item itemvalue="Application.DetailsApplication" />
         <item itemvalue="Application.GatewayApplication" />
         <item itemvalue="Application.DiscoveryServerApplication" />
-        <item itemvalue="Application.SearchApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -113,6 +122,14 @@
       <option name="presentableId" value="Default" />
       <updated>1718736799498</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initialization.">
+      <created>1718937089214</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718937089214</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,5 +143,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initialization." />
+    <option name="LAST_COMMIT_MESSAGE" value="Initialization." />
   </component>
 </project>
