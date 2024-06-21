@@ -8,10 +8,7 @@ import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class WeatherServiceImpl implements WeatherService{
@@ -26,14 +23,19 @@ public class WeatherServiceImpl implements WeatherService{
     @Override
     @Retryable(include = IllegalAccessError.class)
     public List<Integer> findCityIdByName(String city) {
-        City[] cities = restTemplate.getForObject(EndpointConfig.queryWeatherByCity + city, City[].class);
-        List<Integer> ans = new ArrayList<>();
-        for(City c: cities) {
-            if(c != null && c.getWoeid() != null) {
-                ans.add(c.getWoeid());
-            }
-        }
-        return ans;
+//        City[] cities = restTemplate.getForObject(EndpointConfig.queryWeatherByCity + city, City[].class);
+//        List<Integer> ans = new ArrayList<>();
+//        for(City c: cities) {
+//            if(c != null && c.getWoeid() != null) {
+//                ans.add(c.getWoeid());
+//            }
+//        }
+//        return ans;
+        ArrayList res = new ArrayList();
+        res.add(1);
+        res.add(2);
+        res.add(3);
+        return res;
     }
 
     @Override
