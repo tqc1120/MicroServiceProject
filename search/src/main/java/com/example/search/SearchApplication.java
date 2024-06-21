@@ -7,6 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableEurekaClient
+@ComponentScan(basePackages = {"com.example.common", "com.example.search"})
 public class SearchApplication {
 
     public static void main(String[] args) {

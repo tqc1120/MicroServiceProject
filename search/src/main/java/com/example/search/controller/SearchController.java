@@ -1,6 +1,7 @@
 package com.example.search.controller;
 
 import com.example.common.domain.GeneralResponse;
+import com.example.common.util.ResponseUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,12 +18,12 @@ import java.util.Map;
 public class SearchController {
 
     private final RestTemplate restTemplate;
-    private final ObjectMapper objectMapper;
+    private final ResponseUtil responseUtil;
 
     @Autowired
-    public SearchController(RestTemplate restTemplate, ObjectMapper objectMapper) {
+    public SearchController(RestTemplate restTemplate, ResponseUtil responseUtil) {
         this.restTemplate = restTemplate;
-        this.objectMapper = objectMapper;
+        this.responseUtil = responseUtil;
     }
 
 //    @GetMapping("/weather/search")
@@ -37,18 +38,9 @@ public class SearchController {
         String response = restTemplate.getForObject(detailsServiceUrl, String.class);
 
         try {
-            // Deserialize the JSON response
-            Map<String, Object> responseMap = objectMapper.readValue(response, Map.class);
-            Object data = responseMap.get("data");
-
-            GeneralResponse generalResponse = new GeneralResponse();
-            generalResponse.setCode(0);
-            generalResponse.setTimestamp(new Date());
-            generalResponse.setData(data);
-
+            GeneralResponse generalResponse = responseUtil.deserializeResponse(response);
             return new ResponseEntity<>(generalResponse, HttpStatus.OK);
         } catch (Exception e) {
-            // Handle any deserialization errors
             return new ResponseEntity<>("Failed to parse response", HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -59,14 +51,7 @@ public class SearchController {
         String response = restTemplate.getForObject(detailsServiceUrl, String.class);
 
         try {
-            Map<String, Object> responseMap = objectMapper.readValue(response, Map.class);
-            Object data = responseMap.get("data");
-
-            GeneralResponse generalResponse = new GeneralResponse();
-            generalResponse.setCode(0);
-            generalResponse.setTimestamp(new Date());
-            generalResponse.setData(data);
-
+            GeneralResponse generalResponse = responseUtil.deserializeResponse(response);
             return new ResponseEntity<>(generalResponse, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>("Failed to parse response", HttpStatus.INTERNAL_SERVER_ERROR);
