@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8d2eff7-17fe-4f43-b455-ce99577f9cfe" name="Changes" comment="Initialization.">
-      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/example/search/config/RestTemplateConfig.java" afterDir="false" />
+    <list default="true" id="e8d2eff7-17fe-4f43-b455-ce99577f9cfe" name="Changes" comment="Use search service to query weather details by city name.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/common/domain/GeneralResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/domain/GeneralResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/search/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/search.iml" beforeDir="false" afterPath="$PROJECT_DIR$/search/search.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/example/common/domain/GeneralResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/example/common/domain/GeneralResponse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search/src/main/java/com/example/search/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/search/src/main/java/com/example/search/controller/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/target/classes/com/example/search/controller/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/search/target/classes/com/example/search/controller/SearchController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718937089214</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Use search service to query weather details by city name.">
+      <created>1718982788070</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718982788070</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,6 +149,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initialization." />
-    <option name="LAST_COMMIT_MESSAGE" value="Initialization." />
+    <MESSAGE value="Use search service to query weather details by city name." />
+    <option name="LAST_COMMIT_MESSAGE" value="Use search service to query weather details by city name." />
   </component>
 </project>

@@ -52,4 +52,24 @@ public class SearchController {
             return new ResponseEntity<>("Failed to parse response", HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @GetMapping("/weather/port")
+    public ResponseEntity<?> getWeatherServicePort() {
+        String detailsServiceUrl = "http://details/details/port";
+        String response = restTemplate.getForObject(detailsServiceUrl, String.class);
+
+        try {
+            Map<String, Object> responseMap = objectMapper.readValue(response, Map.class);
+            Object data = responseMap.get("data");
+
+            GeneralResponse generalResponse = new GeneralResponse();
+            generalResponse.setCode(0);
+            generalResponse.setTimestamp(new Date());
+            generalResponse.setData(data);
+
+            return new ResponseEntity<>(generalResponse, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>("Failed to parse response", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }
