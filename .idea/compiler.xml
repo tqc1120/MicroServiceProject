@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="search" />
         <module name="details" />
+        <module name="library" />
         <module name="config" />
         <module name="discovery" />
         <module name="gateway" />
@@ -20,6 +21,7 @@
       <module name="details" target="8" />
       <module name="discovery" target="8" />
       <module name="gateway" target="8" />
+      <module name="library" target="8" />
       <module name="search" target="8" />
       <module name="weather" target="8" />
     </bytecodeTargetLevel>
@@ -30,6 +32,7 @@
       <module name="details" options="-parameters" />
       <module name="discovery" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="library" options="-parameters" />
       <module name="search" options="-parameters" />
     </option>
   </component>
