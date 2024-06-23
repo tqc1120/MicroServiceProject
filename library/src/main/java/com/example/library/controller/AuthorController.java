@@ -48,24 +48,27 @@ public class AuthorController {
 //        return new ResponseEntity<>(searchService.getAuthorById(id), HttpStatus.OK);
         return new ResponseEntity<>(new AuthorDto("Author Name", new HashSet<>()), HttpStatus.OK);
     }
-//
-//    @GetMapping(params = "name")
+
+    @GetMapping(params = "name")
 //    @Operation(summary = "Get authors by name", description = "Returns a list of authors that match the given name.")
-//    public List<AuthorDto> getAuthorsByName(@RequestParam("name") String name) {
+    public List<AuthorDto> getAuthorsByName(@RequestParam("name") String name) {
 //        return searchService.getAuthorsByName(name);
-//    }
-//
-//    @PostMapping
+        return null;
+    }
+
+    @PostMapping
 //    @Operation(summary = "Create a new author", description = "Creates a new author and returns the details of the created author.")
-//    public AuthorDto createAuthor(@RequestBody AuthorDto authorDto) {
+    public AuthorDto createAuthor(@RequestBody AuthorDto authorDto) {
 //        return manageService.createAuthor(authorDto);
-//    }
-//
-//    @PutMapping(params = "id")
+        return null;
+    }
+
+    @PutMapping(params = "id")
 //    @Operation(summary = "Update author name", description = "Updates the name of an existing author by their ID.")
-//    public AuthorDto updateAuthorName(@RequestParam("id") Long id, @RequestBody String newName) {
+    public AuthorDto updateAuthorName(@RequestParam("id") Long id, @RequestBody String newName) {
 //        return manageService.updateAuthorName(id, newName);
-//    }
+        return null;
+    }
 
     @GetMapping("/port")
     public ResponseEntity<?> queryAuthor() {

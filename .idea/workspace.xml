@@ -4,26 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8d2eff7-17fe-4f43-b455-ce99577f9cfe" name="Changes" comment="Create utility class to handle the common deserialization process.">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_4_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_3_10_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_23_2_GA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_5_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="e8d2eff7-17fe-4f43-b455-ce99577f9cfe" name="Changes" comment="Add getAuthorById to library service.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/common/config/ExecutorServiceConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/common/config/RestTemplateConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/library.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library/library.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/src/main/java/com/example/library/controller/AuthorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/example/library/controller/AuthorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/gateway-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/properties/gateway-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/src/main/java/com/example/search/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/search/src/main/java/com/example/search/controller/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/target/classes/com/example/search/controller/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/search/target/classes/com/example/search/controller/SearchController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +35,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -216,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718984194204</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add getAuthorById to library service.">
+      <created>1719109021736</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719109021736</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -266,6 +256,7 @@
     <MESSAGE value="Use search service to query weather details by city name." />
     <MESSAGE value="Use search service to query weather port." />
     <MESSAGE value="Create utility class to handle the common deserialization process." />
-    <option name="LAST_COMMIT_MESSAGE" value="Create utility class to handle the common deserialization process." />
+    <MESSAGE value="Add getAuthorById to library service." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add getAuthorById to library service." />
   </component>
 </project>
