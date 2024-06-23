@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8d2eff7-17fe-4f43-b455-ce99577f9cfe" name="Changes" comment="Add security service, access login page.">
+    <list default="true" id="e8d2eff7-17fe-4f43-b455-ce99577f9cfe" name="Changes" comment="Add security service, login, get token, and access secure endpoint successfully.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/security-dev.properites" beforeDir="false" afterPath="$PROJECT_DIR$/properties/security-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/security/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/security.iml" beforeDir="false" afterPath="$PROJECT_DIR$/security/security.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/src/main/java/com/example/security/SecurityApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/SecurityApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/src/main/java/com/example/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/src/main/java/com/example/security/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/src/main/java/com/example/security/filter/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/filter/JwtRequestFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/src/main/java/com/example/security/model/MyUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/model/MyUserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/src/main/java/com/example/security/service/MyUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/service/MyUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/src/main/java/com/example/security/util/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/util/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security/target/classes/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/security/target/classes/bootstrap.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/target/classes/com/example/security/SecurityApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/security/target/classes/com/example/security/SecurityApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +22,8 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/properties" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -61,7 +51,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/security/src" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/common/src/main/java/com/example" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -73,6 +63,11 @@
       <recent name="D:\Antra\Advance Training\weather\security\src\main\java\com\example\security" />
       <recent name="D:\Antra\Advance Training\weather\security\src" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.security" />
+      <recent name="com.example.common.util" />
+      <recent name="com.example.common" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.SecurityApplication">
     <configuration name="ConfigApplication" type="Application" factoryName="Application" nameIsGenerated="true">
@@ -80,6 +75,19 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.example.config.ConfigApplication" />
       <module name="config" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DetailsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.details.DetailsApplication" />
+      <module name="details" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.details.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -123,19 +131,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.search.SearchApplication" />
-      <module name="search" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.search.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SecurityApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.security.SecurityApplication" />
       <module name="security" />
@@ -151,19 +146,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.ConfigApplication" />
-      <item itemvalue="Application.DiscoveryServerApplication" />
       <item itemvalue="Application.GatewayApplication" />
-      <item itemvalue="Application.SearchApplication" />
       <item itemvalue="Application.LibraryApplication" />
       <item itemvalue="Application.SecurityApplication" />
+      <item itemvalue="Application.DetailsApplication" />
+      <item itemvalue="Application.DiscoveryServerApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.SecurityApplication" />
         <item itemvalue="Application.GatewayApplication" />
+        <item itemvalue="Application.DetailsApplication" />
         <item itemvalue="Application.DiscoveryServerApplication" />
         <item itemvalue="Application.LibraryApplication" />
-        <item itemvalue="Application.SearchApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -267,7 +262,21 @@
       <option name="project" value="LOCAL" />
       <updated>1719161122883</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add security service, login, get token, and access secure endpoint successfully.">
+      <created>1719174619750</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1719174619750</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add security service, login, get token, and access secure endpoint successfully.">
+      <created>1719174647579</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1719174647579</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -335,6 +344,7 @@
     <MESSAGE value="Handle search in library service from search service successfully." />
     <MESSAGE value="Handle ManageService in library." />
     <MESSAGE value="Add security service, access login page." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add security service, access login page." />
+    <MESSAGE value="Add security service, login, get token, and access secure endpoint successfully." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add security service, login, get token, and access secure endpoint successfully." />
   </component>
 </project>
