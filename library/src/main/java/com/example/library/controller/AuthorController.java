@@ -10,6 +10,7 @@ package com.example.library.controller;
 //import io.swagger.v3.oas.annotations.responses.ApiResponses;
 //import io.swagger.v3.oas.annotations.tags.Tag;
 import com.example.library.domain.dto.AuthorDto;
+import com.example.library.service.SearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -27,7 +28,7 @@ public class AuthorController {
 
     @Value("${server.port}")
     private int randomServerPort;
-//    private final SearchService searchService;
+    private final SearchService searchService;
 //    private final ManageService manageService;
 
 //    @Autowired
@@ -35,7 +36,12 @@ public class AuthorController {
 //        this.searchService = searchService;
 //        this.manageService = manageService;
 //    }
-//
+
+    @Autowired
+    public AuthorController(SearchService searchService) {
+        this.searchService = searchService;
+    }
+
     @GetMapping(params = "id")
 //    @Operation(summary = "Get author by ID", description = "Returns the details of an author by their ID.")
 //    @ApiResponses(value = {
@@ -45,8 +51,8 @@ public class AuthorController {
 //            @ApiResponse(responseCode = "404", description = "Author not found",
 //                    content = @Content) })
     public ResponseEntity<AuthorDto> getAuthorById(@RequestParam("id") Long id) {
-//        return new ResponseEntity<>(searchService.getAuthorById(id), HttpStatus.OK);
-        return new ResponseEntity<>(new AuthorDto("Author Name", new HashSet<>()), HttpStatus.OK);
+        return new ResponseEntity<>(searchService.getAuthorById(id), HttpStatus.OK);
+//        return new ResponseEntity<>(new AuthorDto("Author Name", new HashSet<>()), HttpStatus.OK);
     }
 
     @GetMapping(params = "name")

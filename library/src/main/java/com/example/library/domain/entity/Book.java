@@ -2,8 +2,7 @@ package com.example.library.domain.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.*;
-
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 

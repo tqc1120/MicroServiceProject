@@ -1,7 +1,6 @@
 package com.example.library.domain.entity;
 
-import jakarta.persistence.*;
-
+import javax.persistence.*;
 
 @Entity
 @Table(name = "book_authors")
