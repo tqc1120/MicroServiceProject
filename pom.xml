@@ -11,6 +11,7 @@
     <modules>
         <module>common</module>
         <module>library</module>
+        <module>security</module>
         <module>details</module>
         <module>discovery</module>
         <module>gateway</module>
