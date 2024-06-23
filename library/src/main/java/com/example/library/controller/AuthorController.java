@@ -9,16 +9,19 @@ package com.example.library.controller;
 //import io.swagger.v3.oas.annotations.responses.ApiResponse;
 //import io.swagger.v3.oas.annotations.responses.ApiResponses;
 //import io.swagger.v3.oas.annotations.tags.Tag;
+import com.example.library.domain.dto.AuthorDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @RestController
-//@RequestMapping("/library")
+@RequestMapping("/authors")
 //@Tag(name = "Authors", description = "API for managing authors")
 public class AuthorController {
 
@@ -33,7 +36,7 @@ public class AuthorController {
 //        this.manageService = manageService;
 //    }
 //
-//    @GetMapping(params = "id")
+    @GetMapping(params = "id")
 //    @Operation(summary = "Get author by ID", description = "Returns the details of an author by their ID.")
 //    @ApiResponses(value = {
 //            @ApiResponse(responseCode = "200", description = "Found the author",
@@ -41,9 +44,10 @@ public class AuthorController {
 //                            schema = @Schema(implementation = AuthorDto.class)) }),
 //            @ApiResponse(responseCode = "404", description = "Author not found",
 //                    content = @Content) })
-//    public ResponseEntity<AuthorDto> getAuthorById(@RequestParam("id") Long id) {
+    public ResponseEntity<AuthorDto> getAuthorById(@RequestParam("id") Long id) {
 //        return new ResponseEntity<>(searchService.getAuthorById(id), HttpStatus.OK);
-//    }
+        return new ResponseEntity<>(new AuthorDto("Author Name", new HashSet<>()), HttpStatus.OK);
+    }
 //
 //    @GetMapping(params = "name")
 //    @Operation(summary = "Get authors by name", description = "Returns a list of authors that match the given name.")
@@ -63,7 +67,7 @@ public class AuthorController {
 //        return manageService.updateAuthorName(id, newName);
 //    }
 
-    @GetMapping("/author/port")
+    @GetMapping("/port")
     public ResponseEntity<?> queryAuthor() {
         return new ResponseEntity<>("author service + " + randomServerPort, HttpStatus.OK);
     }
