@@ -2,6 +2,8 @@ package com.example.library.controller;
 
 import com.example.library.domain.dto.AuthorDto;
 import com.example.library.domain.dto.BookDto;
+import com.example.library.service.SearchService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,27 +19,30 @@ public class BookController {
     @Value("${server.port}")
     private int randomServerPort;
 
-//    private final SearchService searchService;
+    private final SearchService searchService;
 //    private final ManageService manageService;
-//
+
 //    @Autowired
 //    public BookController(SearchService searchService, ManageService manageService) {
 //        this.searchService = searchService;
 //        this.manageService = manageService;
 //    }
 
+    @Autowired
+    public BookController(SearchService searchService) {
+        this.searchService = searchService;
+    }
+
     @GetMapping(params = "id")
 //    @Operation(summary = "Get book by ID", description = "Returns the details of a book by its ID.")
     public ResponseEntity<BookDto> getBookById(@RequestParam("id")  Long id) {
-//        return new ResponseEntity<>(searchService.getBookById(id), HttpStatus.OK);
-        return new ResponseEntity<>(new BookDto("Book Name", new HashSet<>()), HttpStatus.OK);
+        return new ResponseEntity<>(searchService.getBookById(id), HttpStatus.OK);
     }
 
     @GetMapping(params = "title")
 //    @Operation(summary = "Get books by title", description = "Returns a list of books that match the given title.")
     public List<BookDto> getBooksByTitle(@RequestParam("title") String title) {
-//        return searchService.getBooksByTitle(title);
-        return null;
+        return searchService.getBooksByTitle(title);
     }
 
     @DeleteMapping(params = "id")

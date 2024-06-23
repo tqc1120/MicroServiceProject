@@ -12,6 +12,7 @@ import com.example.library.service.SearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -52,12 +53,19 @@ public class SearchServiceImpl implements SearchService {
 
     @Override
     public List<BookDto> getBooksByTitle(String title) {
-//        Optional<Book> books = bookRepository.findByTitle(title);
-//        if (books.isEmpty()) {
-//            throw new ResourceNotFoundException("No books found with the title: " + title);
-//        }
-//        return books.stream().map(this::mapToBookDto).collect(Collectors.toList());
-        return null;
+        List<Book> books = bookRepository.findByTitle(title);
+        if (books.isEmpty()) {
+            throw new ResourceNotFoundException("No books found with the title: " + title);
+        }
+//        return books.stream()
+//                .map(this::mapToBookDto)
+//                .collect(Collectors.toList());
+        List<BookDto> bookDtos = new ArrayList<>();
+        for (Book book : books) {
+            bookDtos.add(mapToBookDto(book));
+        }
+
+        return bookDtos;
     }
 
     private BookDto mapToBookDto(Book book) {

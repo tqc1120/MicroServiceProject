@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8d2eff7-17fe-4f43-b455-ce99577f9cfe" name="Changes" comment="Add files in library project to mircoservice, library service runsuccessfully, get author by id from search service successfully.">
+    <list default="true" id="e8d2eff7-17fe-4f43-b455-ce99577f9cfe" name="Changes" comment="Get author by name from search service successfully.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/example/library/controller/AuthorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/example/library/controller/AuthorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/example/library/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/example/library/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/example/library/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/example/library/repository/BookRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/src/main/java/com/example/library/service/impl/SearchServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/example/library/service/impl/SearchServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/target/classes/com/example/library/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/target/classes/com/example/library/controller/BookController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/target/classes/com/example/library/repository/BookRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/target/classes/com/example/library/repository/BookRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/target/classes/com/example/library/service/impl/SearchServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/target/classes/com/example/library/service/impl/SearchServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search/src/main/java/com/example/search/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/search/src/main/java/com/example/search/controller/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/target/classes/com/example/search/controller/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/search/target/classes/com/example/search/controller/SearchController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1719148685168</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Get author by name from search service successfully.">
+      <created>1719149386719</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719149386719</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -286,6 +298,7 @@
     <MESSAGE value="Add getAuthorById to library service." />
     <MESSAGE value="Add other method(empty) in AuthorController to library service." />
     <MESSAGE value="Add files in library project to mircoservice, library service runsuccessfully, get author by id from search service successfully." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add files in library project to mircoservice, library service runsuccessfully, get author by id from search service successfully." />
+    <MESSAGE value="Get author by name from search service successfully." />
+    <option name="LAST_COMMIT_MESSAGE" value="Get author by name from search service successfully." />
   </component>
 </project>
