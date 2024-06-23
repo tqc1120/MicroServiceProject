@@ -63,7 +63,7 @@ public class AuthorController {
 //        return manageService.updateAuthorName(id, newName);
 //    }
 
-    @GetMapping("/library/port")
+    @GetMapping("/author/port")
     public ResponseEntity<?> queryAuthor() {
         return new ResponseEntity<>("author service + " + randomServerPort, HttpStatus.OK);
     }

@@ -60,8 +60,8 @@ public class SearchController {
     @GetMapping("/library/port")
     public CompletableFuture<ResponseEntity<?>> getLibraryServicePort() {
         return CompletableFuture.supplyAsync(() -> {
-            String detailsServiceUrl = "http://library/library/port";
-            String response = restTemplate.getForObject(detailsServiceUrl, String.class);
+            String libraryServiceUrl = "http://library/author/port";
+            String response = restTemplate.getForObject(libraryServiceUrl, String.class);
             try {
                 GeneralResponse generalResponse = responseUtil.deserializeResponse(response);
                 return new ResponseEntity<>(generalResponse, HttpStatus.OK);
