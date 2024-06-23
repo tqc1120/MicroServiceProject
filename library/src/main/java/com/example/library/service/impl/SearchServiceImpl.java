@@ -4,7 +4,7 @@ import com.example.library.domain.dto.AuthorDto;
 import com.example.library.domain.dto.BookDto;
 import com.example.library.domain.entity.Author;
 import com.example.library.domain.entity.Book;
-import com.example.library.eception.ResourceNotFoundException;
+import com.example.library.exception.ResourceNotFoundException;
 import com.example.library.repository.AuthorRepository;
 import com.example.library.repository.BookAuthorRepository;
 import com.example.library.repository.BookRepository;
@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -57,9 +58,7 @@ public class SearchServiceImpl implements SearchService {
         if (books.isEmpty()) {
             throw new ResourceNotFoundException("No books found with the title: " + title);
         }
-//        return books.stream()
-//                .map(this::mapToBookDto)
-//                .collect(Collectors.toList());
+
         List<BookDto> bookDtos = new ArrayList<>();
         for (Book book : books) {
             bookDtos.add(mapToBookDto(book));

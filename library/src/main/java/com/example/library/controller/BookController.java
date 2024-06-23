@@ -2,6 +2,7 @@ package com.example.library.controller;
 
 import com.example.library.domain.dto.AuthorDto;
 import com.example.library.domain.dto.BookDto;
+import com.example.library.service.ManageService;
 import com.example.library.service.SearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -20,17 +21,12 @@ public class BookController {
     private int randomServerPort;
 
     private final SearchService searchService;
-//    private final ManageService manageService;
-
-//    @Autowired
-//    public BookController(SearchService searchService, ManageService manageService) {
-//        this.searchService = searchService;
-//        this.manageService = manageService;
-//    }
+    private final ManageService manageService;
 
     @Autowired
-    public BookController(SearchService searchService) {
+    public BookController(SearchService searchService, ManageService manageService) {
         this.searchService = searchService;
+        this.manageService = manageService;
     }
 
     @GetMapping(params = "id")
@@ -48,7 +44,7 @@ public class BookController {
     @DeleteMapping(params = "id")
 //    @Operation(summary = "Delete a book by ID", description = "Deletes a book by its ID.")
     public void deleteBookById(@RequestParam("id") Long bookId) {
-//        manageService.deleteBook(bookId);
+        manageService.deleteBook(bookId);
     }
 
     @GetMapping("/port")

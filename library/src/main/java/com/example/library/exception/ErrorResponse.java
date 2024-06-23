@@ -1,4 +1,4 @@
-package com.example.library.eception;
+package com.example.library.exception;
 
 import java.util.Date;
 

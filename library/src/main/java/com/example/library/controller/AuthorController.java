@@ -10,6 +10,7 @@ package com.example.library.controller;
 //import io.swagger.v3.oas.annotations.responses.ApiResponses;
 //import io.swagger.v3.oas.annotations.tags.Tag;
 import com.example.library.domain.dto.AuthorDto;
+import com.example.library.service.ManageService;
 import com.example.library.service.SearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -29,17 +30,12 @@ public class AuthorController {
     @Value("${server.port}")
     private int randomServerPort;
     private final SearchService searchService;
-//    private final ManageService manageService;
-
-//    @Autowired
-//    public AuthorController(SearchService searchService, ManageService manageService) {
-//        this.searchService = searchService;
-//        this.manageService = manageService;
-//    }
+    private final ManageService manageService;
 
     @Autowired
-    public AuthorController(SearchService searchService) {
+    public AuthorController(SearchService searchService, ManageService manageService) {
         this.searchService = searchService;
+        this.manageService = manageService;
     }
 
     @GetMapping(params = "id")
@@ -52,7 +48,6 @@ public class AuthorController {
 //                    content = @Content) })
     public ResponseEntity<AuthorDto> getAuthorById(@RequestParam("id") Long id) {
         return new ResponseEntity<>(searchService.getAuthorById(id), HttpStatus.OK);
-//        return new ResponseEntity<>(new AuthorDto("Author Name", new HashSet<>()), HttpStatus.OK);
     }
 
     @GetMapping(params = "name")
@@ -64,15 +59,13 @@ public class AuthorController {
     @PostMapping
 //    @Operation(summary = "Create a new author", description = "Creates a new author and returns the details of the created author.")
     public AuthorDto createAuthor(@RequestBody AuthorDto authorDto) {
-//        return manageService.createAuthor(authorDto);
-        return null;
+        return manageService.createAuthor(authorDto);
     }
 
     @PutMapping(params = "id")
 //    @Operation(summary = "Update author name", description = "Updates the name of an existing author by their ID.")
     public AuthorDto updateAuthorName(@RequestParam("id") Long id, @RequestBody String newName) {
-//        return manageService.updateAuthorName(id, newName);
-        return null;
+        return manageService.updateAuthorName(id, newName);
     }
 
     @GetMapping("/port")
