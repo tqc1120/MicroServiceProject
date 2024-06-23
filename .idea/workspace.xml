@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8d2eff7-17fe-4f43-b455-ce99577f9cfe" name="Changes" comment="Add getAuthorById to library service.">
+    <list default="true" id="e8d2eff7-17fe-4f43-b455-ce99577f9cfe" name="Changes" comment="Add other method(empty) in AuthorController to library service.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/example/library/controller/AuthorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/example/library/controller/AuthorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/example/library/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/example/library/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/target/classes/com/example/library/controller/AuthorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/target/classes/com/example/library/controller/AuthorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/target/classes/com/example/library/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/target/classes/com/example/library/controller/BookController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/gateway-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/properties/gateway-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/src/main/java/com/example/search/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/search/src/main/java/com/example/search/controller/SearchController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1719109021736</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add other method(empty) in AuthorController to library service.">
+      <created>1719109295221</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719109295221</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -257,6 +268,7 @@
     <MESSAGE value="Use search service to query weather port." />
     <MESSAGE value="Create utility class to handle the common deserialization process." />
     <MESSAGE value="Add getAuthorById to library service." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add getAuthorById to library service." />
+    <MESSAGE value="Add other method(empty) in AuthorController to library service." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add other method(empty) in AuthorController to library service." />
   </component>
 </project>

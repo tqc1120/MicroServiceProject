@@ -86,10 +86,10 @@ public class SearchController {
         }, executorService);
     }
 
-    @GetMapping("/library/book/port")
+    @GetMapping("/library/books/port")
     public CompletableFuture<ResponseEntity<?>> getLibraryServiceBookPort() {
         return CompletableFuture.supplyAsync(() -> {
-            String libraryServiceUrl = "http://library/book/port";
+            String libraryServiceUrl = "http://library/books/port";
             String response = restTemplate.getForObject(libraryServiceUrl, String.class);
             try {
                 GeneralResponse generalResponse = responseUtil.deserializeResponse(response);
@@ -97,6 +97,21 @@ public class SearchController {
             } catch (Exception e) {
                 return new ResponseEntity<>("Failed to parse response", HttpStatus.INTERNAL_SERVER_ERROR);
             }
+        }, executorService);
+    }
+
+    @GetMapping(value = "/library/books", params = "id")
+    public CompletableFuture<ResponseEntity<?>> getBookById(@RequestParam("id") Long id) {
+        return CompletableFuture.supplyAsync(() -> {
+            String libraryServiceUrl = "http://library/books?id=" + String.valueOf(id);
+            String response = restTemplate.getForObject(libraryServiceUrl, String.class);
+//            try {
+//                GeneralResponse generalResponse = responseUtil.deserializeResponse(response);
+//                return new ResponseEntity<>(generalResponse, HttpStatus.OK);
+//            } catch (Exception e) {
+//                return new ResponseEntity<>("Failed to parse response", HttpStatus.INTERNAL_SERVER_ERROR);
+//            }
+            return new ResponseEntity<>(response, HttpStatus.OK);
         }, executorService);
     }
 }
