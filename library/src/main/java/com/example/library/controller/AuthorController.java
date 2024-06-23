@@ -58,8 +58,7 @@ public class AuthorController {
     @GetMapping(params = "name")
 //    @Operation(summary = "Get authors by name", description = "Returns a list of authors that match the given name.")
     public List<AuthorDto> getAuthorsByName(@RequestParam("name") String name) {
-//        return searchService.getAuthorsByName(name);
-        return null;
+        return searchService.getAuthorsByName(name);
     }
 
     @PostMapping

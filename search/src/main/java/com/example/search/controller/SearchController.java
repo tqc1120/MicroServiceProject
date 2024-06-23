@@ -86,6 +86,21 @@ public class SearchController {
         }, executorService);
     }
 
+    @GetMapping(value = "/library/authors", params = "name")
+    public CompletableFuture<ResponseEntity<?>> getAuthorByName(@RequestParam("name") String name) {
+        return CompletableFuture.supplyAsync(() -> {
+            String libraryServiceUrl = "http://library/authors?name=" + String.valueOf(name);
+            String response = restTemplate.getForObject(libraryServiceUrl, String.class);
+//            try {
+//                GeneralResponse generalResponse = responseUtil.deserializeResponse(response);
+//                return new ResponseEntity<>(generalResponse, HttpStatus.OK);
+//            } catch (Exception e) {
+//                return new ResponseEntity<>("Failed to parse response", HttpStatus.INTERNAL_SERVER_ERROR);
+//            }
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        }, executorService);
+    }
+
     @GetMapping("/library/books/port")
     public CompletableFuture<ResponseEntity<?>> getLibraryServiceBookPort() {
         return CompletableFuture.supplyAsync(() -> {

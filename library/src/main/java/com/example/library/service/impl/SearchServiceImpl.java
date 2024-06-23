@@ -37,12 +37,11 @@ public class SearchServiceImpl implements SearchService {
 
     @Override
     public List<AuthorDto> getAuthorsByName(String name) {
-//        List<Author> authors = authorRepository.getAuthorsByName(name);
-//        if (authors.isEmpty()) {
-//            throw new ResourceNotFoundException("No authors found with the name: " + name);
-//        }
-//        return authors.stream().map(this::mapToAuthorDto).collect(Collectors.toList());
-        return null;
+        List<Author> authors = authorRepository.getAuthorsByName(name);
+        if (authors.isEmpty()) {
+            throw new ResourceNotFoundException("No authors found with the name: " + name);
+        }
+        return authors.stream().map(this::mapToAuthorDto).collect(Collectors.toList());
     }
 
     @Override

@@ -4,39 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8d2eff7-17fe-4f43-b455-ce99577f9cfe" name="Changes" comment="Add all method(empty) in BookController to library service.">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_9_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_2_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_1_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_1_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_1_10_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_1_10_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_3_1_0.xml" beforeDir="false" />
+    <list default="true" id="e8d2eff7-17fe-4f43-b455-ce99577f9cfe" name="Changes" comment="Add files in library project to mircoservice, library service runsuccessfully, get author by id from search service successfully.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/library.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library/library.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/example/library/LibraryApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/example/library/LibraryApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/src/main/java/com/example/library/controller/AuthorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/example/library/controller/AuthorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/example/library/domain/entity/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/example/library/domain/entity/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/example/library/domain/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/example/library/domain/entity/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/example/library/domain/entity/BookAuthor.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/example/library/domain/entity/BookAuthor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/example/library/domain/entity/BookAuthorId.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/example/library/domain/entity/BookAuthorId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/target/classes/com/example/library/LibraryApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/target/classes/com/example/library/LibraryApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/target/classes/com/example/library/controller/AuthorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/target/classes/com/example/library/controller/AuthorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/target/classes/com/example/library/domain/entity/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/target/classes/com/example/library/domain/entity/Author.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/target/classes/com/example/library/domain/entity/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/target/classes/com/example/library/domain/entity/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/target/classes/com/example/library/domain/entity/BookAuthor.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/target/classes/com/example/library/domain/entity/BookAuthor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/target/classes/com/example/library/domain/entity/BookAuthorId.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/target/classes/com/example/library/domain/entity/BookAuthorId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/library-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/properties/library-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/target/classes/com/example/search/controller/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/search/target/classes/com/example/search/controller/SearchController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/example/library/service/impl/SearchServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/example/library/service/impl/SearchServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/src/main/java/com/example/search/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/search/src/main/java/com/example/search/controller/SearchController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1719109295221</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add files in library project to mircoservice, library service runsuccessfully, get author by id from search service successfully.">
+      <created>1719148685168</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1719148685168</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -306,6 +285,7 @@
     <MESSAGE value="Create utility class to handle the common deserialization process." />
     <MESSAGE value="Add getAuthorById to library service." />
     <MESSAGE value="Add other method(empty) in AuthorController to library service." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add other method(empty) in AuthorController to library service." />
+    <MESSAGE value="Add files in library project to mircoservice, library service runsuccessfully, get author by id from search service successfully." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add files in library project to mircoservice, library service runsuccessfully, get author by id from search service successfully." />
   </component>
 </project>
