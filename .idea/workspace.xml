@@ -4,40 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8d2eff7-17fe-4f43-b455-ce99577f9cfe" name="Changes" comment="Handle ManageService in library.">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_api_0_11_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_impl_0_11_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_jackson_0_11_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_1_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_cache_2_1_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_1_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/properties/security-dev.properites" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security/security.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/SecurityApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/domain/AuthenticationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/domain/AuthenticationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/filter/JwtRequestFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/model/MyUserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/service/MyUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/util/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security/src/main/resources/bootstrap.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="e8d2eff7-17fe-4f43-b455-ce99577f9cfe" name="Changes" comment="Add security service, access login page.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/target/classes/com/example/library/repository/BookRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/target/classes/com/example/library/repository/BookRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/target/classes/com/example/library/service/impl/SearchServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/target/classes/com/example/library/service/impl/SearchServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/gateway-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/properties/gateway-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/target/classes/com/example/search/controller/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/search/target/classes/com/example/search/controller/SearchController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/security-dev.properites" beforeDir="false" afterPath="$PROJECT_DIR$/properties/security-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/security/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security/security.iml" beforeDir="false" afterPath="$PROJECT_DIR$/security/security.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security/src/main/java/com/example/security/SecurityApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/SecurityApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security/src/main/java/com/example/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security/src/main/java/com/example/security/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security/src/main/java/com/example/security/filter/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/filter/JwtRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security/src/main/java/com/example/security/model/MyUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/model/MyUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security/src/main/java/com/example/security/service/MyUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/service/MyUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security/src/main/java/com/example/security/util/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/java/com/example/security/util/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/security/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security/target/classes/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/security/target/classes/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security/target/classes/com/example/security/SecurityApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/security/target/classes/com/example/security/SecurityApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +62,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/security/src" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/security/src/main/java/com/example/security" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.23794712" />
@@ -279,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1719155784932</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add security service, access login page.">
+      <created>1719161122883</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1719161122883</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -346,6 +334,7 @@
     <MESSAGE value="Get author by name from search service successfully." />
     <MESSAGE value="Handle search in library service from search service successfully." />
     <MESSAGE value="Handle ManageService in library." />
-    <option name="LAST_COMMIT_MESSAGE" value="Handle ManageService in library." />
+    <MESSAGE value="Add security service, access login page." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add security service, access login page." />
   </component>
 </project>
