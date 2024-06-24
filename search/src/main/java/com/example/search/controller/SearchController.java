@@ -3,6 +3,7 @@ package com.example.search.controller;
 import com.example.common.domain.GeneralResponse;
 import com.example.common.util.ResponseUtil;
 import com.example.library.domain.dto.AuthorDto;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,6 +29,7 @@ public class SearchController {
     }
 
     @GetMapping("/weather/search")
+    @HystrixCommand(fallbackMethod = "fallbackGetDetails")
     public CompletableFuture<ResponseEntity<?>> getDetails(@RequestParam String city) {
         return CompletableFuture.supplyAsync(() -> {
             String detailsServiceUrl = "http://details/details?city=" + city;
@@ -42,6 +44,7 @@ public class SearchController {
         }, executorService);
     }
 
+    @HystrixCommand(fallbackMethod = "fallbackGetWeatherServicePort")
     @GetMapping("/weather/port")
     public CompletableFuture<ResponseEntity<?>> getWeatherServicePort() {
         return CompletableFuture.supplyAsync(() -> {
@@ -57,6 +60,7 @@ public class SearchController {
     }
 
     @GetMapping("/library/authors/port")
+    @HystrixCommand(fallbackMethod = "fallbackGetLibraryServiceAuthorPort")
     public CompletableFuture<ResponseEntity<?>> getLibraryServiceAuthorPort() {
         return CompletableFuture.supplyAsync(() -> {
             String libraryServiceUrl = "http://library/authors/port";
@@ -71,6 +75,7 @@ public class SearchController {
     }
 
     @GetMapping(value = "/library/authors", params = "id")
+    @HystrixCommand(fallbackMethod = "fallbackGetAuthorById")
     public CompletableFuture<ResponseEntity<?>> getAuthorById(@RequestParam("id") Long id) {
         return CompletableFuture.supplyAsync(() -> {
             String libraryServiceUrl = "http://library/authors?id=" + String.valueOf(id);
@@ -86,6 +91,7 @@ public class SearchController {
     }
 
     @GetMapping(value = "/library/authors", params = "name")
+    @HystrixCommand(fallbackMethod = "fallbackGetAuthorByName")
     public CompletableFuture<ResponseEntity<?>> getAuthorByName(@RequestParam("name") String name) {
         return CompletableFuture.supplyAsync(() -> {
             String libraryServiceUrl = "http://library/authors?name=" + String.valueOf(name);
@@ -101,6 +107,7 @@ public class SearchController {
     }
 
     @GetMapping("/library/books/port")
+    @HystrixCommand(fallbackMethod = "fallbackGetLibraryServiceBookPort")
     public CompletableFuture<ResponseEntity<?>> getLibraryServiceBookPort() {
         return CompletableFuture.supplyAsync(() -> {
             String libraryServiceUrl = "http://library/books/port";
@@ -115,6 +122,7 @@ public class SearchController {
     }
 
     @GetMapping(value = "/library/books", params = "id")
+    @HystrixCommand(fallbackMethod = "fallbackGetBookById")
     public CompletableFuture<ResponseEntity<?>> getBookById(@RequestParam("id") Long id) {
         return CompletableFuture.supplyAsync(() -> {
             String libraryServiceUrl = "http://library/books?id=" + String.valueOf(id);
@@ -130,6 +138,7 @@ public class SearchController {
     }
 
     @GetMapping(value = "/library/books", params = "title")
+    @HystrixCommand(fallbackMethod = "fallbackGetBookByName")
     public CompletableFuture<ResponseEntity<?>> getBookByName(@RequestParam("title") String title) {
         return CompletableFuture.supplyAsync(() -> {
             String libraryServiceUrl = "http://library/books?title=" + String.valueOf(title);
