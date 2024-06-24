@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8d2eff7-17fe-4f43-b455-ce99577f9cfe" name="Changes" comment="Add hystrix to search service.">
-      <change afterPath="$PROJECT_DIR$/search/src/main/java/com/example/search/controller/SearchFallback.java" afterDir="false" />
+    <list default="true" id="e8d2eff7-17fe-4f43-b455-ce99577f9cfe" name="Changes" comment="Add fallback methods.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/example/library/LibraryApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/example/library/LibraryApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/target/classes/com/example/library/LibraryApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/target/classes/com/example/library/LibraryApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/src/main/java/com/example/search/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/search/src/main/java/com/example/search/controller/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search/target/classes/com/example/search/controller/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/search/target/classes/com/example/search/controller/SearchController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/library-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/properties/library-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/properties/security-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/properties/security-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/search.iml" beforeDir="false" afterPath="$PROJECT_DIR$/search/search.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +24,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/properties" />
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="JpbToolWindowState">
@@ -63,6 +62,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Antra\Advance Training\weather" />
       <recent name="D:\Antra\Advance Training\weather\security\src\main\java\com\example\security" />
       <recent name="D:\Antra\Advance Training\weather\security\src" />
     </key>
@@ -72,7 +72,7 @@
       <recent name="com.example.common" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SearchApplication">
+  <component name="RunManager" selected="Application.LibraryApplication">
     <configuration name="ConfigApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -157,11 +157,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SearchApplication" />
         <item itemvalue="Application.LibraryApplication" />
-        <item itemvalue="Application.DetailsApplication" />
         <item itemvalue="Application.GatewayApplication" />
         <item itemvalue="Application.DiscoveryServerApplication" />
+        <item itemvalue="Application.SearchApplication" />
+        <item itemvalue="Application.DetailsApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -286,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1719188014088</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add fallback methods.">
+      <created>1719190308514</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1719190308515</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -356,6 +363,7 @@
     <MESSAGE value="Add security service, access login page." />
     <MESSAGE value="Add security service, login, get token, and access secure endpoint successfully." />
     <MESSAGE value="Add hystrix to search service." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add hystrix to search service." />
+    <MESSAGE value="Add fallback methods." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add fallback methods." />
   </component>
 </project>
